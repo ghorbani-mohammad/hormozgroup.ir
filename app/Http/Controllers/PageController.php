@@ -12,6 +12,7 @@ use \Morilog\Jalali\jDateTime;
 use Carbon\Carbon;
 use \Morilog\Jalali\CalendarUtils;
 use Hekmatinasser\Verta\Verta;
+use \Auth;
 
 class PageController extends Controller
 {
@@ -26,7 +27,21 @@ class PageController extends Controller
             ->alternateName('سینی فلزی')
             ->sku('متر')
             ->description('سینی کابل برای سازماندهی کابل های عبوری مورد استفاده قرار می گیرد')
-            ->aggregateRating(['ratingValue' => 4.4, "reviewCount" => "89"]);
+            ->aggregateRating(['ratingValue' => 4.4, "reviewCount" => "89"])
+            ->offers([
+                "priceCurrency" => "IRR",
+                "url" => "https://hormozgroup.ir/سینی-کابل",
+                "price" => 1960000,
+                "itemCondition" => "https://schema.org/UsedCondition",
+                "availability" => "https://schema.org/InStock",
+                "priceValidUntil" => Carbon::tomorrow(),
+            ])
+            ->review([
+                "author" => "محمد قربانی",
+                "datePublished" => Carbon::yesterday(),
+                "description" => "بسیار عالی بود"
+            ])
+            ->gtin13('isbn:978-0-13-384178-7');
 
         $videoSchema = Schema::videoobject()
             ->name('سینی کابل سی ان سی')
@@ -46,7 +61,21 @@ class PageController extends Controller
             ->image('https://hormozgroup.ir/images/ladercable2.webp')
             ->sku('متر')
             ->description('سینی کابل برای سازماندهی کابل های عبوری مورد استفاده قرار می گیرد')
-            ->aggregateRating(['ratingValue' => 4.4, "reviewCount" => "89"]);
+            ->aggregateRating(['ratingValue' => 4.4, "reviewCount" => "89"])
+            ->offers([
+                "priceCurrency" => "IRR",
+                "url" => "https://hormozgroup.ir/نردبان-کابل",
+                "price" => 1960000,
+                "itemCondition" => "https://schema.org/UsedCondition",
+                "availability" => "https://schema.org/InStock",
+                "priceValidUntil" => Carbon::tomorrow(),
+            ])
+            ->review([
+                "author" => "محمد قربانی",
+                "datePublished" => Carbon::yesterday(),
+                "description" => "بسیار عالی بود"
+            ])
+            ->gtin13('isbn:978-0-13-384178-7');
 
         return view('laddercable', compact('productSchema'));
     }
@@ -70,7 +99,7 @@ class PageController extends Controller
 
     public function sitemap()
     {
-        SitemapGenerator::create('https://hormozgroup.ir')->writeToFile('/var/www/hormozgroup2.ir/public/sitemap.xml');
+        SitemapGenerator::create('https://hormozgroup.ir')->writeToFile('/var/www/hormozgroup.ir/public/sitemap.xml');
     }
 
     public function feeList()
