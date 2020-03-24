@@ -5,6 +5,7 @@
     <title>@yield('title')</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="canonical" href="{!! str_replace('www.', '', URL::current()) !!}">
     <link rel="stylesheet" href="/css/bootstrap.minified.css">
     @yield('head')
     <style type="text/css">
@@ -12,21 +13,21 @@
           font-family: iransans;
           font-style: normal;
           font-weight: normal;
-          src: url(/fonts/IRANSans-web.woff2);
+          src: url(/fonts/IRANSansWebFaNum.woff2);
           font-display: swap;
       }
       @font-face{
           font-family: iransans;
           font-style: normal;
           font-weight: lighter;
-          src: url(/fonts/IRANSans-Light-web.woff2);
+          src: url(/fonts/IRANSansWebFaNum_Light.woff2);
           font-display: swap;
       }
       @font-face{
           font-family: iransans;
           font-style: normal;
           font-weight: bold;
-          src: url(/fonts/IRANSans-Bold-web.woff2);
+          src: url(/fonts/IRANSansWebFaNum_Bold.woff2);
           font-display: swap;
       }
       body{
@@ -62,12 +63,7 @@
 
     @include('footer')
 
-    <script src="/js/jquery-3.2.1.min.js"></script>
-    <script src="/js/popper.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/all.js"></script>
    @yield('scripts')
-
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.min.js"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery.lazy/1.7.9/jquery.lazy.plugins.min.js"></script>
   </body>
 </html>

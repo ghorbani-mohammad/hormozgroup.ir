@@ -8,7 +8,6 @@
 
 @section('head')
 <meta name="description" content="هرمز گروپ تولید کننده انواع سینی کابل و نردبان کابل و تمامی متعلقات آن می باشد. این گروه محصولات خود را با استفاده از دستگاه CNC ترومپ 600 تولید می کند">
-<link rel="canonical" href="http://hormozgroup.ir">
 <style>
 	.carousel-item{
 		height: 300px;
