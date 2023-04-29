@@ -1,0 +1,10 @@
+services:
+  main:
+    container_name: hormozgroup.ir
+    build: .
+    command: ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8300"]
+    volumes:
+      - .:/var/www/hormozgroup.ir
+    ports:
+      - 8300:8300
+    restart: unless-stopped
