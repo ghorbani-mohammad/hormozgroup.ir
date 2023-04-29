@@ -1,5 +1,5 @@
 services:
-  main:
+  hormozgroup:
     container_name: hormozgroup.ir
     build: .
     command: ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8300"]
@@ -8,3 +8,19 @@ services:
     ports:
       - 8300:8300
     restart: unless-stopped
+    networks:
+      - hormozgroup
+
+  mysql:
+    image: mysql:8.0.32
+    container_name: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    env_file:
+      - .env
+    volumes:
+      - ./hormozgroup_db_volume/:/var/lib/mysql
+    networks:
+      - hormozgroup
+
+networks:
+  hormozgroup:
