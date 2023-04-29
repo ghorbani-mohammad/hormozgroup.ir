@@ -1,0 +1,42 @@
+version: '3'
+
+services:
+  hormozgroup:
+    image: thiagobarradas/wordpress:4.9.4-php7.2
+    container_name: hormozgroup.ir
+    volumes:
+      - .:/var/www/html
+    env_file:
+      - .env
+    ports:
+      - 127.0.0.1:8120:80
+    restart: unless-stopped
+    networks:
+      - hormozgroup
+
+  mysql:
+    image: mysql:8.0.32
+    container_name: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    env_file:
+      - .env
+    volumes:
+      - ./hormozgroup_db_volume/:/var/lib/mysql
+    networks:
+      - hormozgroup
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    ports:
+      - 8080:80
+    environment:
+      - PMA_HOST=mysql
+      - UPLOAD_LIMIT=300M
+    depends_on:
+      - mysql
+    networks:
+      - hormozgroup
+
+networks:
+  hormozgroup:
