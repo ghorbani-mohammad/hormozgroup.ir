@@ -2,21 +2,20 @@ version: '3'
 
 services:
   hormozgroup:
-    image: thiagobarradas/wordpress:4.9.4-php7.2
     container_name: hormozgroup.ir
+    build: .
+    command: ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8300"]
     volumes:
-      - .:/var/www/html
-    env_file:
-      - .env
+      - .:/var/www/hormozgroup.ir
     ports:
-      - 127.0.0.1:8120:80
+      - 8300:8300
     restart: unless-stopped
     networks:
       - hormozgroup
 
   mysql:
     image: mysql:8.0.32
-    container_name: mysql
+    container_name: hormozgroup_mysql
     command: --default-authentication-plugin=mysql_native_password
     env_file:
       - .env
@@ -31,7 +30,7 @@ services:
     ports:
       - 8080:80
     environment:
-      - PMA_HOST=mysql
+      - PMA_HOST=hormozgroup_mysql
       - UPLOAD_LIMIT=300M
     depends_on:
       - mysql
