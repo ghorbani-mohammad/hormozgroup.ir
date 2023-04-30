@@ -1,8 +1,8 @@
 @extends('master')
 
-@section('title')
-وبلاگ
-@endsection
+@section('title', 'وبلاگ')
+@section('keywords', 'سینی کابل، نصب سینی کابل، اجرای سینی کابل مقالات سینی کابل')
+@section('description', 'مقالات آموزشی در رابطه با سینی کابل، انواع سینی کابل، نصب سینی کابل و غیر')
 
 @section('container')
 <div class="card my-5 ">
