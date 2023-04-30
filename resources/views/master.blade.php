@@ -4,6 +4,8 @@
     <title>@yield('title')</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="@yield('keywords')">
+    <meta name="description" content="@yield('description')">
     <link rel="canonical" href="{!! str_replace('www.', '', URL::current()) !!}">
     @yield('head')
     <link rel="stylesheet" href="/css/bootstrap.minified.css">
@@ -12,22 +14,22 @@
           font-family: iransans;
           font-style: normal;
           font-weight: normal;
-          src: url(/fonts/IRANSansWebFaNum.woff2);
           font-display: swap;
+          src: url(/fonts/IRANSansWebFaNum.woff2);
       }
       @font-face{
           font-family: iransans;
           font-style: normal;
           font-weight: lighter;
-          src: url(/fonts/IRANSansWebFaNum_Light.woff2);
           font-display: swap;
+          src: url(/fonts/IRANSansWebFaNum_Light.woff2);
       }
       @font-face{
           font-family: iransans;
           font-style: normal;
           font-weight: bold;
-          src: url(/fonts/IRANSansWebFaNum_Bold.woff2);
           font-display: swap;
+          src: url(/fonts/IRANSansWebFaNum_Bold.woff2);
       }
       body{
         font-family: iransans, Tahoma;
