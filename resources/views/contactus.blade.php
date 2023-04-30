@@ -1,12 +1,10 @@
 @extends('master')
 
-
-@section('title')
-تماس با گروه هرمز
-@endsection
+@section('title', 'تماس با ما || گروه هرمز')
+@section('keywords', 'خرید سینی کابل، فروش سینی کابل، خرید نردبان کابل، فروش نردبان کابل')
+@section('description', 'در صورت نیاز به هر گونه مشاوره در زمینه خرید و نصب سینی کابل و نردبان کابل با شماره 0912-7194347 تماس بگیرید')
 
 @section('head')
-<meta name="description" content="تماس با ما - 02133960092و09123102458 هرمز گروپ تولید کننده انواع سینی کابل و نردبان کابل در کشور">
 <link rel="stylesheet" href="css/font-awesome.min.css">
 <style>
 	p{
