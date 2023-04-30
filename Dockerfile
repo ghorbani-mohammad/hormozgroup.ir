@@ -8,9 +8,6 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 WORKDIR /var/www/hormozgroup.ir
 COPY . .
 ENV COMPOSER_ALLOW_SUPERUSER 1
-RUN composer update --ignore-platform-req=ext-exif
-RUN composer install --ignore-platform-req=ext-exif
 RUN composer update --with-all-dependencies --ignore-platform-req=ext-exif
 RUN composer install --ignore-platform-req=ext-exif
 RUN composer dump-autoload
-RUN composer update --ignore-platform-req=ext-exif
