@@ -88,7 +88,7 @@ class FeeController extends Controller
 					]);
 					makeHTTPRequest('sendMessage', [
 						'chat_id' => $chatId,
-						'text' => "✅قیمت ورق با موفقیت به روز شد✅\nhttps://t.me/iv?url=https://www.hormozgroup.ir/%D9%84%DB%8C%D8%B3%D8%AA-%D9%82%DB%8C%D9%85%D8%AA&rhash=f3c33476d84029"
+						'text' => "✅قیمت ورق باs موفقیت به روز شد✅\nhttps://t.me/iv?url=https://www.hormozgroup.ir/%D9%84%DB%8C%D8%B3%D8%AA-%D9%82%DB%8C%D9%85%D8%AA"
 					]);
 				} else {
 					makeHTTPRequest('sendMessage', [
