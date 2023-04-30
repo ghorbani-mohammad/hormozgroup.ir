@@ -16,7 +16,7 @@ class FeeController extends Controller
 	public function control()
 	{
 		ini_set('error_reporting', E_ALL);
-		$BOT_API_KEY = env('BOT_API_KEY')
+		$BOT_API_KEY = env('BOT_API_KEY');
 
 		function makeHTTPRequest($method, $datas = [])
 		{
