@@ -15,4 +15,5 @@ Homestead.yaml
 npm-debug.log
 yarn-error.log
 hormozgroup_db_volume/
-
+public/images
+public/videos
