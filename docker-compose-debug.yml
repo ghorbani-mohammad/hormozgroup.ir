@@ -9,9 +9,9 @@ services:
       - .:/var/www/hormozgroup.ir
     ports:
       - 8300:8300
-    restart: unless-stopped
     networks:
       - hormozgroup
+    restart: unless-stopped
 
   mysql:
     image: mysql:8.0.32
@@ -23,6 +23,7 @@ services:
       - ./hormozgroup_db_volume/:/var/lib/mysql
     networks:
       - hormozgroup
+    restart: unless-stopped
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
@@ -36,6 +37,7 @@ services:
       - mysql
     networks:
       - hormozgroup
+    restart: unless-stopped
 
 networks:
   hormozgroup:

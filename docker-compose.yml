@@ -23,6 +23,7 @@ services:
       - ./hormozgroup_db_volume/:/var/lib/mysql
     networks:
       - hormozgroup
+    restart: unless-stopped
 
 networks:
   hormozgroup:
