@@ -5,6 +5,7 @@
     <title>@yield('title')</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="@yield('keywords')">
     <link rel="canonical" href="{!! str_replace('www.', '', URL::current()) !!}">
     <link rel="stylesheet" href="/css/bootstrap.minified.css">
     @yield('head')
