@@ -16,11 +16,11 @@ class FeeController extends Controller
 	public function control()
 	{
 		ini_set('error_reporting', E_ALL);
-		$BOT_API_KEY = env('BOT_API_KEY');
+		define('BOT_API_KEY', env('BOT_API_KEY'));
 
 		function makeHTTPRequest($method, $datas = [])
 		{
-			$url = "https://api.telegram.org/bot" . $BOT_API_KEY . "/" . $method;
+			$url = "https://api.telegram.org/bot" . BOT_API_KEY . "/" . $method;
 			$ch = curl_init();
 			curl_setopt($ch, CURLOPT_URL, $url);
 			curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
