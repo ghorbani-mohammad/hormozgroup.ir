@@ -1,13 +1,12 @@
 @extends('master')
 
 
-@section('title')
-درباره گروه هرمز
-@endsection
+@section('title', 'درباره گروه هرمز')
+@section('keywords', 'تولید کننده سینی کابل، تولید کننده نردبان کابل، گروه صنعتی هرمز')
+@section('description', 'درباره ما - گروه هرمز تولید کننده انواع سینی کابل و نردبان کابل')
 
 @section('head')
 {!!$localBusiness!!}
-<meta name="description" content="درباره ما - هرمز گروپ تولید کننده انواع سینی کابل و نردبان کابل">
 <style>
 	p{
 		font-size: 0.9rem;
