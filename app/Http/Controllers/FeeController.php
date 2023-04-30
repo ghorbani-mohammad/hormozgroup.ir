@@ -6,7 +6,9 @@ use App\Fee;
 use App\Mstate;
 use \Morilog\Jalali\jDate;
 use \Morilog\Jalali\jDateTime;
+use \Morilog\Jalali\CalendarUtils;
 use Carbon\Carbon;
+use \Log;
 
 class FeeController extends Controller
 {
@@ -14,7 +16,7 @@ class FeeController extends Controller
 	public function control()
 	{
 		ini_set('error_reporting', E_ALL);
-		define('API_KEY', '410263054:AAG3NdteTv3zsygmJsvVfIgkoTSSA-wzj_E');
+		define('API_KEY', '614559366:AAGm0pMHznL3PYRYAsd4dn_-ZEyZb5KFMlM');
 
 		function makeHTTPRequest($method, $datas = [])
 		{
@@ -30,11 +32,9 @@ class FeeController extends Controller
 				return json_decode($res);
 			}
 		}
-
 		$update = json_decode(file_get_contents('php://input'));
 		// $today=(string)$today;
 
-		\Log::info("Nothing CallBack Query");
 		$chatId = $update->message->chat->id;
 		$user_id = $update->message->from->id;
 		$messageText = $update->message->text;
@@ -47,23 +47,22 @@ class FeeController extends Controller
 				'chat_id' => $chatId,
 				'text' => "یوزر آیدی شما ثبت شد " . $user_id
 			]);
-		} elseif ($messageText == "/setsheetprice") {
-
-			makeHTTPRequest('sendMessage', [
-				'chat_id' => $chatId,
-				'text' => "یوزر آیدی شما: " . $user_id
-			]);
+		} elseif ($messageText == "/setsheetfee") {
+			// Log::info('set price');
+			// makeHTTPRequest('sendMessage', [
+			// 	'chat_id' => $chatId,
+			// 	'text' => "یوزر آیدی شما: " . $user_id
+			// ]);
 
 			Mstate::where('user_id', $user_id)->update(['state' => 'setsheetprice']);
 
 			$feeSheet = Fee::find(1);
 			$value = $feeSheet->value;
-			// $value=persianumber($value);
 			$lastUpdated = $feeSheet->updated_at;
 			$lastUpdated = new Carbon($lastUpdated);
 			$lastUpdatedDate = $lastUpdated->toDateString();
-			$lastUpdatedDate = jDateTime::strftime('Y-m-d', $lastUpdatedDate);
-			$lastUpdatedDate = jDateTime::convertNumbers($lastUpdatedDate);
+			$lastUpdatedDate = CalendarUtils::strftime('Y-m-d', $lastUpdatedDate);
+			$lastUpdatedDate = CalendarUtils::convertNumbers($lastUpdatedDate);
 
 			makeHTTPRequest('sendMessage', [
 				'chat_id' => $chatId,
@@ -74,8 +73,7 @@ class FeeController extends Controller
 				'text' => "قیمت جدید را ارسال کنید"
 			]);
 		} else {
-			// \Log::info("Helo");
-			// exit();
+			Log::info($user_id);
 			$state = Mstate::find($user_id)->state;
 			if ($state == "setsheetprice") {
 				// makeHTTPRequest('sendMessage',[
@@ -87,6 +85,10 @@ class FeeController extends Controller
 					makeHTTPRequest('sendMessage', [
 						'chat_id' => $chatId,
 						'text' => "قیمت با موفقیت به روز شد"
+					]);
+					makeHTTPRequest('sendMessage', [
+						'chat_id' => $chatId,
+						'text' => "✅قیمت ورق با موفقیت به روز شد✅\nhttps://t.me/iv?url=https://www.hormozgroup.ir/%D9%84%DB%8C%D8%B3%D8%AA-%D9%82%DB%8C%D9%85%D8%AA&rhash=f3c33476d84029"
 					]);
 				} else {
 					makeHTTPRequest('sendMessage', [

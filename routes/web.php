@@ -13,7 +13,7 @@
 
 Route::view('/', 'index');
 
-Route::post('fee/bot.php', 'FeeController@control');
+Route::post('/fee/bot.php', 'FeeController@control');
 
 Route::get('sitemap',  'PageController@sitemap');
 
@@ -33,3 +33,5 @@ Route::auth();
 Route::resource('posts', 'PostController');
 
 Route::view('map', 'map');
+
+Route::get('test', 'FeeController@control');
