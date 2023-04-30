@@ -7,9 +7,11 @@ services:
       - .:/var/www/hormozgroup.ir
     ports:
       - 8300:8300
-    restart: unless-stopped
     networks:
       - hormozgroup
+    env_file:
+      - .env
+    restart: unless-stopped
 
   mysql:
     image: mysql:8.0.32
