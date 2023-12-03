@@ -89,7 +89,7 @@ class PageController extends Controller
             ->geo(["@type" => "GeoCoordinates", "latitude" => "35.689765", "longitude" => "51.424188"])
             ->address([
                 "addressCountry" => "IR", "postalCode" => "346915875", "addressLocality" => "تهران",
-                "streetAddress" => "خیابان سعدی جنوبی، جنب کوچه خوانساری، مجتمع تجاری سعدی، طبقه اول، پلاک 120"
+                "streetAddress" => "لاله زار جنوبی، پاساژ صنعت، طبقه همکف، پلاک 4"
             ])
             ->image('https://hormozgroup.ir/images/aboutus.webp')
             ->priceRange('IRR')

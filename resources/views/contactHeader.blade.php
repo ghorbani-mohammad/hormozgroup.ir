@@ -6,6 +6,6 @@
 		<i class="fa fa-phone" aria-hidden="true"></i>
 	</div>
 	<div class="col-md-7 d-none d-md-block text-left">
-		سعدی جنوبی، مجتمع تجاری سعدی، طبقه دوم، واحد {{persianumber("207")}} 
+		لاله زارجنوبی، پاساژ صنعت، طبقه همکف، پلاک 4 {{persianumber("207")}} 
 	</div>
 </div>
