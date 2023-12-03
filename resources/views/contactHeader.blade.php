@@ -6,6 +6,6 @@
 		<i class="fa fa-phone" aria-hidden="true"></i>
 	</div>
 	<div class="col-md-7 d-none d-md-block text-left">
-		لاله زارجنوبی، پاساژ صنعت، طبقه همکف، پلاک 4 {{persianumber("207")}} 
+		لاله زارجنوبی، پاساژ صنعت، طبقه همکف، پلاک  {{persianumber("4")}} 
 	</div>
 </div>
