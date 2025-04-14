@@ -55,9 +55,9 @@
 	</div>
 	<div class="col-12 col-sm-6 mb-3">
 		<div class="row">
-			<div class="col-6 col-sm-3 text-center"><img style="max-height: 100px !important;" height="120px" class="rounded-circle img-fluid lazy" data-src="images/sales.jpg" alt=""></div>
+			<div class="col-6 col-sm-3 text-center"><img style="max-height: 100px !important;" height="120px" class="rounded-circle img-fluid lazy" data-src="images/rd.jpg" alt=""></div>
 			<div class="col-6 col-sm-9 align-self-center">
-				<p>مهندس لاله قائدی</p>
+				<p>مهندس محمد قربانی</p>
 				<p>سمت: مدیر فروش</p>
 			</div>
 		</div>

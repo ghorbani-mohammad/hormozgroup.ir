@@ -21,10 +21,10 @@
 		<img class="img-fluid rounded-circle my-2 my-sm-0" src="images/sales.jpg" alt="" style="max-height: 120px;">
 	</div>
 	<div class="col-12 col-sm-9 align-self-center">
-		<p style="font-size: 0.9rem;">سلام. لاله قادری هستم مدیر فروش گروه صنعتی هرمز. در صورت نیاز به هرگونه مشاوره در مورد محصولات لطفا با من تماس بگیرید.</p>
+		<p style="font-size: 0.9rem;">سلام. محمد قربانی هستم مدیر فروش گروه صنعتی هرمز. در صورت نیاز به هرگونه مشاوره در مورد محصولات لطفا با من تماس بگیرید.</p>
 		<div class="text-center" dir="ltr">
-			<p><i class="fa fa-mobile fa-2x" aria-hidden="true" style="padding-right:5px;"></i>{{persianumber("09358811546")}} :همراه</p>
-			<p><i class="fa fa-telegram fa-2x"></i>تلگرام: <a style="color:#0c5460;" href="https://telegram.me/Ghaedi_kabirsini">@Ghaedi_kabirsini</a> </p>
+			<p><i class="fa fa-mobile fa-2x" aria-hidden="true" style="padding-right:5px;"></i>{{persianumber("09127194347")}} :همراه</p>
+			<p><i class="fa fa-telegram fa-2x"></i>تلگرام: <a style="color:#0c5460;" href="https://telegram.me/ghorbani_mohammad">@ghorbani_mohammad</a> </p>
 		</div>
 	</div>
 </div>
