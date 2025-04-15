@@ -37,7 +37,7 @@ mix.copy('node_modules/jquery/dist/jquery.min.js', 'public/js/jquery.min.js');
 
 // Combining different javascript libraries
 mix.scripts([
-    'node_modules/jquery/dist/jquery.min.js',  // Use directly from node_modules
+    'node_modules/jquery/dist/jquery.min.js',
     'public/js/popper.min.js',
     'public/js/bootstrap.min.js',
     'public/js/jquery.lazy.min.js',
