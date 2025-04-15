@@ -1,6 +1,16 @@
 # Build stage for Node.js
 FROM node:14.21.3-alpine AS node
 
+# Install build dependencies
+RUN apk add --no-cache \
+    autoconf \
+    automake \
+    build-base \
+    libtool \
+    nasm \
+    libpng-dev \
+    python3
+
 WORKDIR /var/www/hormozgroup.ir
 COPY package*.json ./
 RUN npm install --legacy-peer-deps
