@@ -1,7 +1,7 @@
 # Build stage for Node.js
 FROM node:14.21.3-alpine AS node
 
-# Install build dependencies
+# Install build dependencies - adding more dependencies for image processing
 RUN apk add --no-cache \
     autoconf \
     automake \
@@ -9,11 +9,21 @@ RUN apk add --no-cache \
     libtool \
     nasm \
     libpng-dev \
-    python3
+    python3 \
+    git \
+    g++ \
+    make \
+    libjpeg-turbo-dev \
+    optipng \
+    pngquant
+
+# Set npm config to avoid permission issues
+RUN npm config set unsafe-perm true
 
 WORKDIR /var/www/hormozgroup.ir
 COPY package*.json ./
-RUN npm install --legacy-peer-deps
+# Add a retry mechanism to npm install
+RUN npm install --legacy-peer-deps --no-optional || npm install --legacy-peer-deps --no-optional || npm install --legacy-peer-deps --no-optional
 COPY . .
 RUN npm run production
 
