@@ -22,6 +22,9 @@ RUN npm config set unsafe-perm true
 RUN npm config set cache-min 9999999
 RUN npm config set network-timeout 600000
 
+# Install cross-env globally to avoid path issues
+RUN npm install -g cross-env
+
 WORKDIR /var/www/hormozgroup.ir
 COPY package*.json ./
 
@@ -29,8 +32,12 @@ COPY package*.json ./
 RUN NODE_OPTIONS=--max_old_space_size=4096 npm install --legacy-peer-deps --no-optional --force
 
 COPY . .
+
+# Fix potential node_modules/.bin symlink issues
+RUN npm rebuild
+
 # Build with increased memory limit
-RUN NODE_OPTIONS=--max_old_space_size=4096 npm run production
+RUN NODE_OPTIONS=--max_old_space_size=4096 npm run production || NODE_OPTIONS=--max_old_space_size=4096 NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js
 
 # PHP stage
 FROM php:7.4-fpm-alpine
