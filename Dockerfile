@@ -17,15 +17,20 @@ RUN apk add --no-cache \
     optipng \
     pngquant
 
-# Set npm config to avoid permission issues
+# Set npm config to avoid permission issues and increase memory limit
 RUN npm config set unsafe-perm true
+RUN npm config set cache-min 9999999
+RUN npm config set network-timeout 600000
 
 WORKDIR /var/www/hormozgroup.ir
 COPY package*.json ./
-# Add a retry mechanism to npm install
-RUN npm install --legacy-peer-deps --no-optional || npm install --legacy-peer-deps --no-optional || npm install --legacy-peer-deps --no-optional
+
+# Install with --force to bypass peer dependency issues and increase memory limit
+RUN NODE_OPTIONS=--max_old_space_size=4096 npm install --legacy-peer-deps --no-optional --force
+
 COPY . .
-RUN npm run production
+# Build with increased memory limit
+RUN NODE_OPTIONS=--max_old_space_size=4096 npm run production
 
 # PHP stage
 FROM php:7.4-fpm-alpine
