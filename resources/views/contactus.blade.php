@@ -18,7 +18,7 @@
 @section('container')
 <div class="row my-5 alert alert-info">
 	<div class="col-12 col-sm-3 text-center">
-		<img class="img-fluid rounded-circle my-2 my-sm-0" src="images/sales.jpg" alt="" style="max-height: 120px;">
+		<img class="img-fluid rounded-circle my-2 my-sm-0" src="images/rd.jpg" alt="" style="max-height: 120px;">
 	</div>
 	<div class="col-12 col-sm-9 align-self-center">
 		<p style="font-size: 0.9rem;">سلام. محمد قربانی هستم مدیر فروش گروه صنعتی هرمز. در صورت نیاز به هرگونه مشاوره در مورد محصولات لطفا با من تماس بگیرید.</p>
