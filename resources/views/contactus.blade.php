@@ -47,7 +47,7 @@
 	<div class="col-md-6 mt-3 mt-md-0">
 		<span style="color: #2ecc71;">کارگاه تولیدی:</span>
 		<br>
-		<span style="font-size: 0.9rem;"><i class="fa fa-map-marker" aria-hidden="true"></i> آدرس: تهران، بزرگراه آزادگان، آهن مکان، فاز پنجم شرقی، پلاک {{persianumber("1181")}}</span>
+		<span style="font-size: 0.9rem;"><i class="fa fa-map-marker" aria-hidden="true"></i> آدرس: تهران، شور آباد، بلوار شصت متری معدن هفتم، پلاک {{persianumber("82")}}</span>
 		<br>
 		<span style="font-size: 0.9rem;"><i class="fa fa-volume-control-phone" aria-hidden="true"></i> تلفن: {{persianumber("55440335")}}</span>
 		<br>
