@@ -33,7 +33,7 @@
 	<div class="col-md-6">
 		<span style="color: #2ecc71;">دفتر فروش:</span>
 		<br>
-		<span style="font-size: 0.9rem;"><i class="fa fa-map-marker" aria-hidden="true"></i> آدرس: تهران، خ سعدی جنوبی، مجتمع تجاری سعدی، طبقه دوم، واحد {{persianumber("207")}}</span>
+		<span style="font-size: 0.9rem;"><i class="fa fa-map-marker" aria-hidden="true"></i> آدرس: تهران، خ لاله زار جنوبی، پاساژ فراز، طبقه همکف، واحد {{persianumber("80")}}</span>
 		<br>
 		<span style="font-size: 0.9rem;"><i class="fa fa-volume-control-phone" aria-hidden="true"></i> تلفن: ۳۳۹۶۰۰۹۲ - ۳۳۹۵۰۷۷۰ - ۳۳۹۸۶۷۰۲</span>
 		<br>
