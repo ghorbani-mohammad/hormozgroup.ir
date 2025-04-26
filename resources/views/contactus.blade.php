@@ -37,7 +37,7 @@
 		<br>
 		<span style="font-size: 0.9rem;"><i class="fa fa-volume-control-phone" aria-hidden="true"></i> تلفن: ۳۳۹۶۰۰۹۲ - ۳۳۹۵۰۷۷۰ - ۳۳۹۸۶۷۰۲</span>
 		<br>
-		{{--  <span style="font-size: 0.9rem;"><i class="fa fa-mobile" aria-hidden="true" style="padding-right:5px;"></i>  همراه: {{persianumber("09123102458")}}</span>  --}}
+		{{--  <span style="font-size: 0.9rem;"><i class="fa fa-mobile" aria-hidden="true" style="padding-right:5px;"></i>  همراه: {{persianumber("09127194347")}}</span>  --}}
 		{{--  <br>  --}}
 		<br>
 		<div class="text-center">
